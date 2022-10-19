@@ -1,13 +1,11 @@
-import React from 'react'
-import {ACTIONS} from './App'
+import { ACTIONS } from "./App"
 
-
-const DigitButton = ({dispatch, digit}) => {
+export default function DigitButton({ dispatch, digit }) {
   return (
-    <div>
-      <button onClick = {() => dispatch({type: ACTIONS.ADD_DIGIT, payload:{digit}})}> {digit}</button>
-    </div>
+    <button
+      onClick={() => dispatch({ type: ACTIONS.ADD_DIGIT, payload: { digit } })}
+    >
+      {digit}
+    </button>
   )
 }
-
-export default DigitButton

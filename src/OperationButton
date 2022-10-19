@@ -1,17 +1,13 @@
-import React from 'react'
-import {ACTIONS} from './App'
+import { ACTIONS } from "./App"
 
-
-const DigitButton = ({dispatch, operation}) => {
+export default function OperationButton({ dispatch, operation }) {
   return (
-    <div>
-      <button onClick = {() => dispatch({type: ACTIONS.CHOOSE_OPERATION, payload:{operation} }  )
-    }
-        >
-        {operation}
-      </button>
-    </div>
+    <button
+      onClick={() =>
+        dispatch({ type: ACTIONS.CHOOSE_OPERATION, payload: { operation } })
+      }
+    >
+      {operation}
+    </button>
   )
 }
-
-export default DigitButton
